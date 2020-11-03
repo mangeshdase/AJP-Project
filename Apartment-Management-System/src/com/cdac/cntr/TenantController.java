@@ -30,13 +30,13 @@ public class TenantController {
 	@RequestMapping(value="/reg.htm", method=RequestMethod.POST)
 	public String register(Tenant tenant, ModelMap map) {
 		map.put("tenant", new Tenant());
-		return "index";
+		return "login_form";
 		
 	}
 	
 	@RequestMapping(value = "/prep_log_form.htm", method = RequestMethod.GET)
 	public String prepLogForm(ModelMap map) {
-		map.put("user", new Tenant());
+		map.put("tenant", new Tenant());
 		return "login_form";
 		
 	}

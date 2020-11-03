@@ -8,7 +8,7 @@
 <title>Login Form</title>
 </head>
 <body>
-	<spr:form action="login.htm" method="post" commandName="user">
+	<spr:form action="login.htm" method="post" commandName="tenant">
 <table align="center">
 <tr>
 	<td>User Name:</td>
@@ -27,7 +27,7 @@
 	<td><input type="submit" value="Login"></td>
 	</tr>
 	<tr>
-	<td><a href="index.htm">Back</a></td>
+	<td><a href="index.jsp">Back</a></td>
 	</tr>
 </table>
 </spr:form>
