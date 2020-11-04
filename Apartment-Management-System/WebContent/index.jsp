@@ -1,49 +1,4 @@
-<<<<<<< HEAD
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>ApnaComplex.com</title>
-<style>
-.header { 
-	padding: 10px;
-	text-align: center;
-	color: black;
-	}
-.navbar {
-	overflow:hidden;
-	background-color:aqua;
-	}
-.navbar a { float: left;
-	 display: block;
-	 color:white;
-	 text-align: center;
-	 padding: 14px 20px;
-	 justify-content: space-between;
-	 }
-</style>
-</head>
-<body>
-<table>
-	<tr>
-	<td><div align="left"><img alt="MyComplex" src="" height="100px" weidth="100px"></div></td>
-	<td><div class="header"><h3>Apartment Management System</h3></div></td>
-</table>
-<div class="navbar">
-	<h1>Apartment Management System</h1>
-</div>
-<tr style="height: 100% ;width: 100%">
-<td style="background-color: red ;"></td>
-<td><div style="background: yellow;"></div>
-<div style="background-color: green;"><button type="button" class="btn btn-dark onclick=">AdminLogin</button><button>ApartmentDtails</button></div>
-<div><a href="prep_log_form.htm"><button>Tenantlogin</button></div>
-<div><a href="home.htm"><button>Visitorlogin</button></a></div>
-</td>
-</tr>
-</body>
-=======
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -81,12 +36,12 @@
 	<div style="flex: 2;
 				display: flex;flex-direction: column;
 				
-				background-image: url('file:///C:/Users/sonu/Desktop/CDAC_official/Advance_JAVA/Adv_Project/AJP-Project/Apartment-Management-System/WebContent/META-INF/istockphoto-1044307774-1024x1024.jpg');
+				background-image: url('F:\cdac\AJP-Project\Apartment-Management-System\WebContent\META-INF\istockphoto-1044307774-1024x1024.jpg');
 				background-repeat: no-repeat;
   				background-position: center;
   				margin: 0px; padding: 0px;
   				background-position: ">
-				<img style="width: 100%; height: 100%;" alt="" src="file:///C:/Users/sonu/Desktop/CDAC_official/Advance_JAVA/Adv_Project/AJP-Project/Apartment-Management-System/WebContent/META-INF/istockphoto-1044307774-1024x1024.jpg">
+				<img style="width: 100%; height: 100%;" alt="" src="file:///F:\cdac\AJP-Project\Apartment-Management-System\WebContent\META-INF\istockphoto-1044307774-1024x1024.jpg">
 		<div style="flex: 8;text-align: center;
 				align-items: center;font-size: 32px; font-weight: bold;
 				position: absolute;
@@ -107,7 +62,7 @@
 	
 	<div style="flex: 9; background: green; display: flex;">
 		<div style="flex: 8; background: purple; ">
-			<img style="width: 100%; height: 100%;" alt="" src="file:///C:/Users/sonu/Desktop/CDAC_official/Advance_JAVA/Adv_Project/AJP-Project/Apartment-Management-System/WebContent/META-INF/91481398.jpg">
+			<img style="width: 100%; height: 100%;" alt="" src="F:\cdac\AJP-Project\Apartment-Management-System\WebContent\META-INF\91481398.jpg"/>
 		</div>
 		<div style="flex: 4; background: rgb(228,69,197); display: flex; flex-direction: column;">
 			<div style="flex: 7; padding: 20px; font-size: 24px; font-weight: bold;">Pay less and buy big<br>
@@ -130,10 +85,10 @@
 						flex: 5;
 						border-radius: 20px;
 						padding-top: 60px;">
-				<a>Appartment Information</a><br>
-				<a>Tenant Login</a><br>
+				<a>Apartment Information</a><br>
+				<a href="prep_log_form.htm">Tenant Login</a><br>
 				<a>Visitors Login</a><br>
-				<a>Admin Login</a>
+				<a href="prep_admin_log_form.htm">Admin Login</a>
 			</div>
 		</div>
 	</div>
@@ -141,5 +96,4 @@
 </div>
 
 </body>
->>>>>>> cb3ccb9ca9eb8606805f2d1fbee695e21bd0206d
 </html>

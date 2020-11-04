@@ -24,13 +24,13 @@ public class Tenant {
 	 private String tenantEmail;
 	
 	@Column(name = "mobile_no")
-	 private int tenantMobile;
+	 private String tenantMobile;
 	
 	@Column(name = "blok_no")
 	 private String tenantBlock;
 	
 	@Column(name = "flat_no")
-	 private int tenantFlatNo;
+	 private String tenantFlatNo;
 	
 	@Column(name = "flat_type")
 	 private String tenantFlatType;
@@ -38,8 +38,8 @@ public class Tenant {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Tenant(int tenantId, String tenantName, String tenantPass, String tenantEmail, int tenantMobile,
-			String tenantBlock, int tenantFlatNo, String tenantFlatType) {
+	public Tenant(int tenantId, String tenantName, String tenantPass, String tenantEmail, String tenantMobile,
+			String tenantBlock, String tenantFlatNo, String tenantFlatType) {
 		super();
 		this.tenantId = tenantId;
 		this.tenantName = tenantName;
@@ -74,10 +74,10 @@ public class Tenant {
 	public void setTenantEmail(String tenantEmail) {
 		this.tenantEmail = tenantEmail;
 	}
-	public int getTenantMobile() {
+	public String getTenantMobile() {
 		return tenantMobile;
 	}
-	public void setTenantMobile(int tenantMobile) {
+	public void setTenantMobile(String tenantMobile) {
 		this.tenantMobile = tenantMobile;
 	}
 	public String getTenantBlock() {
@@ -86,10 +86,10 @@ public class Tenant {
 	public void setTenantBlock(String tenantBlock) {
 		this.tenantBlock = tenantBlock;
 	}
-	public int getTenantFlatNo() {
+	public String getTenantFlatNo() {
 		return tenantFlatNo;
 	}
-	public void setTenantFlatNo(int tenantFlatNo) {
+	public void setTenantFlatNo(String tenantFlatNo) {
 		this.tenantFlatNo = tenantFlatNo;
 	}
 	public String getTenantFlatType() {

@@ -29,7 +29,8 @@
 
 <property name="annotatedClasses">
 	<list>
-		<value>com.cdac.dto.Tenant</value>
+		 <value>com.cdac.dto.Tenant</value>
+	<!-- <value>com.cdac.dto.Admin</value>-->
 	</list>
 
 </property>

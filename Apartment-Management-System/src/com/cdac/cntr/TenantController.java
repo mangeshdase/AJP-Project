@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.cdac.dto.Tenant;
 import com.cdac.serv.TenantService;
+import com.cdac.valid.TenantLoginValidator;
 import com.cdac.valid.TenantValidator;
 
 @Controller
@@ -19,6 +20,8 @@ public class TenantController {
 	private TenantService tenantService;
 	@Autowired
 	private TenantValidator tenantValidator;
+	@Autowired
+	private TenantLoginValidator tenantloginValidator;
 	
 	@RequestMapping(value="/prep_reg_form.htm", method = RequestMethod.GET)
 	public String prepRegForm(ModelMap map) {
@@ -28,10 +31,14 @@ public class TenantController {
 		
 	}
 	@RequestMapping(value="/reg.htm", method=RequestMethod.POST)
-	public String register(Tenant tenant, ModelMap map) {
-		map.put("tenant", new Tenant());
+	public String register(Tenant tenant,BindingResult result, ModelMap map) {
+		tenantValidator.validate(tenant, result);
+		if(result.hasErrors()) {
+			return "reg_form";
+		}else {
+		tenantService.addTenant(tenant);
 		return "login_form";
-		
+		}
 	}
 	
 	@RequestMapping(value = "/prep_log_form.htm", method = RequestMethod.GET)
@@ -43,7 +50,7 @@ public class TenantController {
 	
 	@RequestMapping(value="/login.htm",method = RequestMethod.POST)
 	public String login(Tenant tenant, BindingResult result, ModelMap map,HttpSession session){
-		tenantValidator.validate(tenant, result);
+		tenantloginValidator.validate(tenant, result);
 		if(result.hasErrors()) {
 			return "login_form";
 		}

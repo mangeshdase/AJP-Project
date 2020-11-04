@@ -7,9 +7,9 @@
 <meta charset="ISO-8859-1">
 <title>Registration Form</title>
 </head>
-<body>
-<spr:form action="reg.htm" method="post" commandName="tenant">
-<table>
+<body">
+<spr:form action="reg.htm" method="post" commandName="tenant" align="center">
+<table align="center">
 	<div><tr>
 		<td>Tenant Registration Form</td>
 		</tr></div>
@@ -50,13 +50,16 @@
 	</td>
 	</tr>
 	<tr>
-	<td>Tenant FlatType:</td>
-	<td><spr:input type="dropdown" path="tenantName"/>
+	<td for="flattype">Tenant FlatType:</td>
+	<td><spr:select id="flattype" path="tenantFlatType">
+	<option value="3BHK">3BHK</option>
+	<option value="2BHK">2BHK</option>
+	<option value="1BHK">1BHK</option></spr:select>
 	<font color="red"><spr:errors path="tenantName"></spr:errors></font>
 	</td>
 	
 	<tr>
-	<td></td>
+	<td><a href="login_form">Back</a></td>
 	<td><input type="submit" value="SignUp"/> 
 	</table>
 </spr:form>

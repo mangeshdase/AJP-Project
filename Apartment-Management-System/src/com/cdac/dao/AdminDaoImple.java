@@ -11,21 +11,24 @@ import org.springframework.orm.hibernate4.HibernateCallback;
 import org.springframework.orm.hibernate4.HibernateTemplate;
 import org.springframework.stereotype.Repository;
 
+import com.cdac.dto.Admin;
 import com.cdac.dto.Tenant;
 
 @Repository
-public class TenantDaoImple implements TenantDao{
+public class AdminDaoImple implements AdminDao{
 	
 	@Autowired
 	private HibernateTemplate hibernateTemplate;
+	
+
 	@Override
-	public void insertTenant(Tenant tenant) {
+	public void insertAdmin(Admin admin){
 		hibernateTemplate.execute(new HibernateCallback<Void>() {
 
 			@Override
 			public Void doInHibernate(Session session) throws HibernateException {
 				Transaction tr = session.beginTransaction();
-				session.save(tenant);
+				session.save(admin);
 				tr.commit();
 				session.flush();
 				session.close();
@@ -34,19 +37,21 @@ public class TenantDaoImple implements TenantDao{
 		});
 	}
 
+
 	@Override
-	public boolean checkTenant(Tenant tenant) {
+	public boolean checkAdmin(Admin admin) {
 		boolean b = hibernateTemplate.execute(new HibernateCallback<Boolean>() {
 
 			@Override
 			public Boolean doInHibernate(Session session) throws HibernateException {
-			 Transaction tr = session.beginTransaction();
-			 Query q = session.createQuery("from Tenant where tenantName=? and tenantPass = ?");
-			 q.setString(0, tenant.getTenantName());
-			 q.setString(1, tenant.getTenantPass());
-			 List<Tenant> li = q.list();
+			 
+				Transaction tr = session.beginTransaction();
+			 Query q = session.createQuery("from Admin where adminName=? and adminPass = ?");
+			 q.setString(0, admin.getAdminName());
+			 q.setString(1, admin.getAdminPass());
+			 List<Admin> li = q.list();
 			 boolean flag = !li.isEmpty();
-			 tenant.setTenantId(li.get(0).getTenantId());
+			 //admin.setTenantId(li.get(0).getTenantId());
 			 tr.commit();
 			 session.flush();
 			 session.close();
