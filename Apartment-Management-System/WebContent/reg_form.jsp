@@ -63,6 +63,7 @@ body{
 		cursor: pointer;
 		margin: 12px 0;
 	}
+	
 </style>
 </head>
 <body">
@@ -121,12 +122,14 @@ body{
 	</tr>
 	<tr>
 	
-	<td><spr:select id="flattype" path="tenantFlatType">
+	<td>
+	<div class="textbox">
+	<spr:select id="flattype" path="tenantFlatType">
 	<option value="3BHK">3BHK</option>
 	<option value="2BHK">2BHK</option>
 	<option value="1BHK">1BHK</option></spr:select>
 	<font color="red"><spr:errors path="tenantName"></spr:errors></font>
-	</td>
+	</div></td>
 	
 	<tr>
 	
