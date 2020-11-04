@@ -131,10 +131,7 @@ body{
 	<font color="red"><spr:errors path="tenantName"></spr:errors></font>
 	</div></td>
 	
-	<tr>
-	
-	<td><input class="btn" type="submit" value="SignUp"/>
-	</td></tr>
+	<tr><td><input class="btn" type="submit" value="SignUp"/></td></tr>
 	<tr><td><button class="btn" formaction="login.htm">Back to login</button></td></tr> 
 	</table>
 </spr:form>

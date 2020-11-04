@@ -70,9 +70,12 @@ body{
 </head>
 <body>
 	<spr:form action="login.htm" method="post" commandName="tenant">
+	<div class="login-box">
 <table align="center">
-<tr>
-	
+
+<tr><td>
+	<h1>Login</h1></td></tr>
+<tr>	
 	<td>
 	<div class="textbox">
 	<i class="fa fa-user" aria-hidden="true"></i>
@@ -90,14 +93,16 @@ body{
 	</div></td>
 	</tr>
 	<tr>
-	<td><a href="prep_reg_form.htm">Signup</a></td>
-	<td><input type="submit" value="Login"></td>
+	<td><input class="btn" type="submit" value="Login"></td>
 	</tr>
 	<tr>
-	<td><a href="index.jsp">Back</a></td>
+	<td><a href="index.jsp" style="color: white;">Back</a></td>
+	<td><a href="prep_reg_form.htm" style="color: white;">Signup</a></td>
 	</tr>
 </table>
+</div>
 </spr:form>
+
 	
 
 </body>
