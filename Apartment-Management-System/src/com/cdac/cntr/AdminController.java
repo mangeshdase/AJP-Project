@@ -54,7 +54,8 @@ public class AdminController {
 	
 	@RequestMapping(value = "/tenant_list.htm",method = RequestMethod.GET)
 	public String allTenants(ModelMap map,HttpSession session) {
-		int tenantId = ((Tenant)session.getAttribute("tenantId")).getTenantId();
+		//String adminName = ((Admin)session.getAttribute("adminName")).getAdminName();
+		int tenantId = ((Tenant)session.getAttribute("tenant")).getTenantId();
 		List<Tenant> li = adminService.selectAll(tenantId);
 		map.put("tenantList", li);
 		return "tenant_list";
