@@ -52,7 +52,7 @@ public class Tenant {
 		this.tenantFlatType = tenantFlatType;
 	}
 	public Tenant(int tenantId) {
-		// TODO Auto-generated constructor stub
+		this.tenantId = tenantId;
 	}
 
 	public int getTenantId() {

@@ -1,9 +1,12 @@
 package com.cdac.serv;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.cdac.dao.AdminDao;
+import com.cdac.dao.TenantDao;
 import com.cdac.dto.Admin;
 import com.cdac.dto.Tenant;
 @Service
@@ -11,6 +14,8 @@ public class AdminServiceImple implements AdminService{
 
 	@Autowired
 	private AdminDao adminDao;
+	
+	private TenantDao tenantDao;
 	
 
 	@Override
@@ -22,5 +27,18 @@ public class AdminServiceImple implements AdminService{
 		
 		return adminDao.checkAdmin(admin);
 	}
+	@Override
+	public void removeTenant(int tenantId) {
+		adminDao.deleteTenant(tenantId);
+		
+	}
+	
+	@Override
+	public List<Tenant> selectAll(int tenantId) {
+		
+		return adminDao.selectAll(tenantId);
+	}
+	
+	
 
 }

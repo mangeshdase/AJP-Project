@@ -79,7 +79,7 @@
 
 <div class="navbar">
 
-	<div class="navbtn"><a href=""><button class="btn" >Tenant list</button></a></div>
+	<div class="navbtn"><a href="tenant_list.htm"><button class="btn" >Tenant list</button></a></div>
 	<div class="navbtn"><a href=""><button class="btn" >Book Cab</button></a></div>
 	<div class="navbtn"><a href=""><button class="btn" >Book FunctionHall</button></a></div>
 	<div class="navbtn"><a href=""><button class="btn" >Book Ambulance</button></a></div>

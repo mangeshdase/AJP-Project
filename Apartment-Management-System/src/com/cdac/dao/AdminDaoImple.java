@@ -110,7 +110,7 @@ public class AdminDaoImple implements AdminDao{
 			@Override
 			public List<Tenant> doInHibernate(Session session) throws HibernateException {
 				Transaction tr = session.beginTransaction();
-				Query q = session.createQuery("from Expense where tenantId = ?");
+				Query q = session.createQuery("from Tenant where tenantId = ?");
 				q.setInteger(0, tenantId);
 				List<Tenant> li = q.list();
 				System.out.println(li); 

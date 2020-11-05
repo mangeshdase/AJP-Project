@@ -1,5 +1,7 @@
 package com.cdac.cntr;
 
+import java.util.List;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,7 +38,7 @@ public class AdminController {
 	public String login(Admin admin, ModelMap map,HttpSession session){
 		//tenantloginValidator.validate(admin, result);
 		//if(result.hasErrors()) {
-	//		return "admin_form";
+		//return "admin_form";
 		//}
 		boolean b = adminService.findAdmin(admin);
 		if(b) {
@@ -50,6 +52,12 @@ public class AdminController {
 		
 	}
 	
-	
+	@RequestMapping(value = "/tenant_list.htm",method = RequestMethod.GET)
+	public String allTenants(ModelMap map,HttpSession session) {
+		int tenantId = ((Tenant)session.getAttribute("tenantId")).getTenantId();
+		List<Tenant> li = adminService.selectAll(tenantId);
+		map.put("tenantList", li);
+		return "tenant_list";
+	}
 
 }
