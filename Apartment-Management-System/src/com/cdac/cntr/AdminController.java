@@ -41,7 +41,7 @@ public class AdminController {
 		boolean b = adminService.findAdmin(admin);
 		if(b) {
 			session.setAttribute("admin", admin);
-		return "admin_main";
+		return "admin_home";
 		}else
 		{
 			map.put("admin", new Admin());
@@ -49,5 +49,7 @@ public class AdminController {
 		}
 		
 	}
+	
+	
 
 }

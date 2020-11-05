@@ -62,4 +62,70 @@ public class AdminDaoImple implements AdminDao{
 		return b;
 	}
 
+
+	@Override
+	public void insertTenant(Tenant tenant) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void deleteTenant(int tenantId) {
+		hibernateTemplate.execute(new HibernateCallback<Void>() {
+
+			@Override
+			public Void doInHibernate(Session session) throws HibernateException {
+				Transaction tr = session.beginTransaction();
+				session.delete(new Tenant(tenantId));
+				tr.commit();
+				session.flush();
+				session.close();
+				return null;
+			}
+			
+		});
+		
+	}
+
+
+	@Override
+	public Tenant selectTenant(int tenantId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public void updateTenant(Tenant tenant) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public List<Tenant> selectAll(int tenantId) {
+		List<Tenant> tenantList = hibernateTemplate.execute(new HibernateCallback<List<Tenant>>() {
+
+			@Override
+			public List<Tenant> doInHibernate(Session session) throws HibernateException {
+				Transaction tr = session.beginTransaction();
+				Query q = session.createQuery("from Expense where tenantId = ?");
+				q.setInteger(0, tenantId);
+				List<Tenant> li = q.list();
+				System.out.println(li); 
+				tr.commit();
+				session.flush();
+				session.close();
+				return li;
+			}
+			
+		});
+		return tenantList;
+	}
+	
+	
+	
+	
+
 }

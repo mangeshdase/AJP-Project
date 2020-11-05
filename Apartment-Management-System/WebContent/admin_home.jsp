@@ -4,7 +4,8 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>home</title>
+<title>admin home</title>
+
 <style type="text/css">
 *{
 	margin: 0;
@@ -60,8 +61,10 @@
 	}
 
 </style>
+
 </head>
 <body>
+
 <div class="header">
 
 	<div style="flex: 2; font-size: 16px;" class="btn">Home</div>
@@ -76,7 +79,7 @@
 
 <div class="navbar">
 
-	<div class="navbtn"><a href=""><button class="btn" >Pay Electricity</button></a></div>
+	<div class="navbtn"><a href=""><button class="btn" >Tenant list</button></a></div>
 	<div class="navbtn"><a href=""><button class="btn" >Book Cab</button></a></div>
 	<div class="navbtn"><a href=""><button class="btn" >Book FunctionHall</button></a></div>
 	<div class="navbtn"><a href=""><button class="btn" >Book Ambulance</button></a></div>
@@ -147,6 +150,7 @@
 
 
 
+	
 
 
 </body>

@@ -38,6 +38,7 @@ public class Tenant {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+
 	public Tenant(int tenantId, String tenantName, String tenantPass, String tenantEmail, String tenantMobile,
 			String tenantBlock, String tenantFlatNo, String tenantFlatType) {
 		super();
@@ -50,6 +51,10 @@ public class Tenant {
 		this.tenantFlatNo = tenantFlatNo;
 		this.tenantFlatType = tenantFlatType;
 	}
+	public Tenant(int tenantId) {
+		// TODO Auto-generated constructor stub
+	}
+
 	public int getTenantId() {
 		return tenantId;
 	}
