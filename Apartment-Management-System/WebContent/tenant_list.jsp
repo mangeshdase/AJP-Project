@@ -23,6 +23,7 @@
 			<td>
 				<%=exp.getTenantPass()%>
 			</td>
+			<td><%=exp.getTenantName() %></td>
 			<td>
 				<%=exp.getTenantBlock()%>
 			</td>
@@ -35,8 +36,9 @@
 			</td>
 			
 			
+			
 			<td>
-				<a href="expense_update_form.htm?expenseId=<%=exp.getTenantId()%>">Update</a>
+				<a href="tenant_update_form.htm?tenantId=<%=exp.getTenantId()%>">Update</a>
 			</td>
 		</tr>
 		<% } %>
