@@ -23,4 +23,16 @@ public class TenantServiceImle implements TenantService{
 		return tenantDao.checkTenant(tenant);
 	}
 
+	@Override
+	public String forgotPassword(String tenantEmail) {
+		
+		return tenantDao.forgotPassword(tenantEmail);
+	}
+
+	@Override
+	public void uploadImage(String profilePic, int tenantId) {
+		tenantDao.uploadImage(profilePic, tenantId);
+		
+	}
+
 }

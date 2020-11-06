@@ -1,13 +1,18 @@
 package com.cdac.cntr;
 
+import javax.activation.MailcapCommandMap;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.MailSender;
+import org.springframework.mail.SimpleMailMessage;
+import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.cdac.dto.Tenant;
 import com.cdac.serv.TenantService;
@@ -22,7 +27,8 @@ public class TenantController {
 	private TenantValidator tenantValidator;
 	@Autowired
 	private TenantLoginValidator tenantloginValidator;
-	
+	@Autowired
+	private MailSender mailSender;
 	@RequestMapping(value="/prep_reg_form.htm", method = RequestMethod.GET)
 	public String prepRegForm(ModelMap map) {
 		map.put("tenant", new Tenant());
@@ -64,6 +70,25 @@ public class TenantController {
 			return "login_form";
 		}
 		
+	}
+	
+	@RequestMapping(value = "/forgot_password.htm", method =RequestMethod.POST)
+	public String forgotPassword(@RequestParam String tenantEmail, ModelMap map) {
+		String pass = tenantService.forgotPassword(tenantEmail);
+		String msg = "You are not registered";
+		if(pass != null) {
+			SimpleMailMessage message = new SimpleMailMessage();
+			message.setFrom("dasemangesh14@gmail.com");
+			message.setTo(tenantEmail);
+			message.setSubject("Your Password ");
+			message.setText(pass);
+		
+			mailSender.send(message);
+		msg = "check the mail for password";
+			
+		}
+		map.put("msg", msg);
+		return "info";
 	}
 
 }

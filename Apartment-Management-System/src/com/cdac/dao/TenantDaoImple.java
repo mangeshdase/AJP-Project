@@ -57,4 +57,42 @@ public class TenantDaoImple implements TenantDao{
 		return b;
 	}
 
+	@Override
+	public String forgotPassword(String tenantEmail) {
+		String password = hibernateTemplate.execute(new HibernateCallback<String>() {
+
+			@Override
+			public String doInHibernate(Session session) throws HibernateException {
+				Transaction tr = session.beginTransaction();
+				Query q = session.createQuery("from Tenant where tenantEmail=?");
+				q.setString(0, tenantEmail);
+				List<Tenant> li = q.list();
+				String pass = null;
+				if(!li.isEmpty())
+					pass = li.get(0).getTenantPass();
+				tr.commit();
+				session.flush();
+				session.close();
+				return pass;
+			}
+		});
+		return password;
+	}
+
+	@Override
+	public void uploadImage(String profilePic, int tenantId) {
+		// TODO Auto-generated method stub
+		hibernateTemplate.execute(new HibernateCallback<Void>() {
+
+			@Override
+			public Void doInHibernate(Session session) throws HibernateException {
+				Transaction tr = session.beginTransaction();
+				Tenant tenant = (Tenant)session.get(Tenant.class, tenantId);
+			
+				return null;
+			}
+		
+		});
+	}
+
 }

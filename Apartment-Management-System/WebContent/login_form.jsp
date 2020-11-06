@@ -93,7 +93,20 @@ body{
 	</div></td>
 	</tr>
 	<tr>
+<<<<<<< Updated upstream
 	<td><input class="btn" type="submit" value="Login"></td>
+=======
+			<td>
+				<a href="forgot_password.html" >Forgot Password</a>
+			</td>
+			<td>
+				
+			</td>
+		</tr>
+	<tr>
+	<td><a href="prep_reg_form.htm">Signup</a></td>
+	<td><input type="submit" value="Login"></td>
+>>>>>>> Stashed changes
 	</tr>
 	<tr>
 	<td><a href="index.jsp" style="color: white;">Back</a></td>
