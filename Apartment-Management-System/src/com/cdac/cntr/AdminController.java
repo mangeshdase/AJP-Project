@@ -61,4 +61,16 @@ public class AdminController {
 		return "tenant_list";
 	}
 
+	@RequestMapping(value = "/tenant_update.htm",method = RequestMethod.POST)
+	public String tenantUpdate(Tenant tenant,ModelMap map,HttpSession session) {
+		
+		int tenantId = ((Tenant)session.getAttribute("tenant")).getTenantId();
+		tenant.setTenantId(tenantId);
+		adminService.modifyTenant(tenant);
+			
+		List<Tenant> li = adminService.selectAll(tenantId);
+		map.put("expList", li);
+		return "tenant_list";
+	}
+
 }

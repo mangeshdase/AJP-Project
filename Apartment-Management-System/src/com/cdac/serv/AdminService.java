@@ -10,7 +10,7 @@ public interface AdminService {
 	void addAdmin(Admin admin);
 	boolean findAdmin(Admin admin);
 	void removeTenant(int tenantId);
-	
+	void modifyTenant(Tenant tenant);
 	List<Tenant> selectAll(int tenantId);
 	
 }

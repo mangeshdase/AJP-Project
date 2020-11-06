@@ -13,7 +13,7 @@ body{
 		margin: 0;
 		padding: 0;
 		font-family: sans-serif;
-		background: url("file:///C:/Users/sonu/Desktop/CDAC_official/Advance_JAVA/Adv_Project/AJP-Project/Apartment-Management-System/WebContent/META-INF/reg-building-1444053487655-7507bc7e38c1.jpg") no-repeat;
+		/*background: url("file:///C:/Users/sonu/Desktop/CDAC_official/Advance_JAVA/Adv_Project/AJP-Project/Apartment-Management-System/WebContent/META-INF/reg-building-1444053487655-7507bc7e38c1.jpg") no-repeat;
 		background-size: cover;	
 	}
 	.login-box{
@@ -48,7 +48,7 @@ body{
 		border: none;
 		outline: none;
 		background: none;
-		color: white;
+		color: black;
 		font-size: 18px;
 		width: 80%;
 		float: left;
@@ -58,7 +58,7 @@ body{
 		width: 100%;
 		background: none;
 		border: 2px solid #4caf50;
-		color: white;
+		color: black;
 		padding: 5px;
 		font-size: 18px;
 		cursor: pointer;
@@ -75,17 +75,19 @@ body{
 
 <tr><td>
 	<h1>Login</h1></td></tr>
-<tr>	
+<tr>
+<td style="color: black">Username:</td>	
 	<td>
 	<div class="textbox">
 	<i class="fa fa-user" aria-hidden="true"></i>
 	<spr:input path="tenantName"/>
-	<font color="red"><spr:errors path="tenantName"></spr:errors></font>
+	<font color="red"><spr:errors path="tenantName" ></spr:errors></font>
 	</div></td>
 	</tr>
 	<tr>
-	
+	<td style="color: black">Password:</td>
 	<td>
+	
 	<div class="textbox">
 	<i class="fa fa-lock" aria-hidden="true"></i>
 	<spr:password path="tenantPass"/>
@@ -93,9 +95,8 @@ body{
 	</div></td>
 	</tr>
 	<tr>
-<<<<<<< Updated upstream
+
 	<td><input class="btn" type="submit" value="Login"></td>
-=======
 			<td>
 				<a href="forgot_password.html" >Forgot Password</a>
 			</td>
@@ -105,13 +106,8 @@ body{
 		</tr>
 	<tr>
 	<td><a href="prep_reg_form.htm">Signup</a></td>
-	<td><input type="submit" value="Login"></td>
->>>>>>> Stashed changes
-	</tr>
-	<tr>
-	<td><a href="index.jsp" style="color: white;">Back</a></td>
-	<td><a href="prep_reg_form.htm" style="color: white;">Signup</a></td>
-	</tr>
+<td><a href="index.jsp">Back</a></td>
+
 </table>
 </div>
 </spr:form>

@@ -38,6 +38,11 @@ public class AdminServiceImple implements AdminService{
 		
 		return adminDao.selectAll(tenantId);
 	}
+	@Override
+	public void modifyTenant(Tenant tenant) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 	
 

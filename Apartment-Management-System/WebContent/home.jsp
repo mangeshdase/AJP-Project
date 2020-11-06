@@ -23,7 +23,7 @@
 	.header{
 		height: 100px;
 		width: 100%;
-		background: url("file:///C:/Users/sonu/Desktop/AJP-working/Apartment-Management-System/WebContent/META-INF/header-background.jpg");
+		background: url("file:///F:\cdac\AJP-Project\Apartment-Management-System\WebContent\META-INF\header-background.jpg");
 		background-position: center;
 		display: flex;
 		flex-direction: row;
@@ -86,7 +86,7 @@
 
 <div class="content">
 	<div>
-		<img class="img" alt="" src="file:///C:/Users/sonu/Desktop/AJP-working/Apartment-Management-System/WebContent/META-INF/housing1.jpg">
+		<img class="img" alt="" src="file:///F:\cdac\AJP-Project\Apartment-Management-System\WebContent\META-INF\housing1.jpg">
 	</div>
 	
 	<div class="info">
@@ -96,7 +96,7 @@
 
 <div class="content">
 	<div class="img">
-		<img alt="" src="file:///C:/Users/sonu/Desktop/AJP-working/Apartment-Management-System/WebContent/META-INF/housing2.jpg">
+		<img alt="" src="file:///F:\cdac\AJP-Project\Apartment-Management-System\WebContent\META-INF\housing2.jpg">
 	</div>
 	
 	<div class="info">
@@ -106,7 +106,7 @@
 
 <div class="content">
 	<div class="img">
-		<img alt="" src="file:///C:/Users/sonu/Desktop/AJP-working/Apartment-Management-System/WebContent/META-INF/housing3.jpg">
+		<img alt="" src="file:///F:\cdac\AJP-Project\Apartment-Management-System\WebContent\META-INF\housing3.jpg">
 	</div>
 	
 	<div class="info">
@@ -116,7 +116,7 @@
 
 <div class="content">
 	<div class="img">
-		<img alt="" src="file:///C:/Users/sonu/Desktop/AJP-working/Apartment-Management-System/WebContent/META-INF/housing4.jpg">
+		<img alt="" src="file:///F:\cdac\AJP-Project\Apartment-Management-System\WebContent\META-INF\housing4.jpg">
 	</div>
 	
 	<div class="info">
@@ -126,7 +126,7 @@
 
 <div class="content">
 	<div class="img">
-		<img alt="" src="file:///C:/Users/sonu/Desktop/AJP-working/Apartment-Management-System/WebContent/META-INF/housing5.jpg">
+		<img alt="" src="file:///F:\cdac\AJP-Project\Apartment-Management-System\WebContent\META-INF\housing5.jpg">
 	</div>
 	
 	<div class="info">
@@ -136,7 +136,7 @@
 
 <div class="content">
 	<div class="img">
-		<img alt="" src="file:///C:/Users/sonu/Desktop/AJP-working/Apartment-Management-System/WebContent/META-INF/housing6.jpg">
+		<img alt="" src="file:///F:\cdac\AJP-Project\Apartment-Management-System\WebContent\META-INF\housing6.jpg">
 	</div>
 	
 	<div class="info">

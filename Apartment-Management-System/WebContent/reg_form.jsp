@@ -47,7 +47,7 @@ body{
 		border: none;
 		outline: none;
 		background: none;
-		color: white;
+		color: black;
 		font-size: 18px;
 		width: 80%;
 		float: left;
@@ -57,7 +57,7 @@ body{
 		width: 100%;
 		background: none;
 		border: 2px solid #4caf50;
-		color: white;
+		color: black;
 		padding: 5px;
 		font-size: 18px;
 		cursor: pointer;
@@ -67,12 +67,13 @@ body{
 </style>
 </head>
 <body">
+<
+		<h1 align="center">Tenant Registration Form</h1>
+		
 <spr:form action="reg.htm" method="post" commandName="tenant" align="center">
 <table align="center">
-	<tr>
-		<td><h1>Tenant Registration Form</h1></td>
-		</tr></div>
-		<div><tr>						
+	
+		<td>Username:</td>						
 			<td><div class="textbox">
 		<spr:input path="tenantName" placeholder = "Full name"/>
 		<font color="red"><spr:errors path="tenantName"></spr:errors></font>
@@ -81,6 +82,7 @@ body{
 	</tr>
 	
 	<tr>
+	<td>EmailId:</td>	
 	<td>
 	<div class="textbox">
 	<spr:input path="tenantEmail" placeholder="Email-Id"/>
@@ -89,6 +91,7 @@ body{
 	</tr>
 	
 	<tr>
+	<td>Password:</td>	
 		<td><div class="textbox">
 		
 		<spr:input path="tenantPass" placeholder="Password"/>
@@ -97,7 +100,7 @@ body{
 	</tr>
 	
 	<tr>
-	
+	<td>Mobile No.:</td>	
 	<td>
 	<div class="textbox">
 	<spr:input path="tenantMobile" placeholder="Mobile number"/>
@@ -105,7 +108,7 @@ body{
 	</div></td>
 	</tr>
 	<tr>
-	
+	<td>Block:</td>	
 	<td>
 	<div class="textbox">
 	<spr:input path="tenantBlock" placeholder="Block number"/>
@@ -113,7 +116,7 @@ body{
 	</div></td>
 	</tr>
 	<tr>
-	
+	<td>Flat No.:</td>	
 	<td>
 	<div class="textbox">
 	<spr:input path="tenantFlatNo" placeholder="Flat number"/>
@@ -121,7 +124,7 @@ body{
 	</div></td>
 	</tr>
 	<tr>
-	
+	<td>Flat Type:</td>	
 	<td>
 	<div class="textbox">
 	<spr:select id="flattype" path="tenantFlatType">
@@ -131,8 +134,9 @@ body{
 	<font color="red"><spr:errors path="tenantName"></spr:errors></font>
 	</div></td>
 	
-	<tr><td><input class="btn" type="submit" value="SignUp"/></td></tr>
-	<tr><td><button class="btn" formaction="login.htm">Back to login</button></td></tr> 
+	
+	<tr><td><button class="btn" formaction="login.htm">Back to login</button></td>
+	<td><input class="btn" type="submit" value="SignUp"/></td></tr> 
 	</table>
 </spr:form>
 
